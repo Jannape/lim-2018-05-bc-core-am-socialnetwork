@@ -23,13 +23,13 @@
         </div>
     </header>-->
     <section class="wrapper top">
-        <form class="comentary">
-        <textarea name="textarea" rows="4" cols="50"  placeholder="Ingresa tu opinion"></textarea>
+        <form class="comentary" >
+        <textarea name="textarea" rows="4" cols="50"  placeholder="Ingresa tu opinion" id="mensajePost"></textarea>
         <select>
         <option value="" >PUBLICO 🌎 </option>
         <option value="" >PRIVADO 🔒</option>
         </select>
-        <button type="button" >PUBLICAR</button>
+        <button type="button"  id="post" onclick="guardar()">PUBLICAR</button>
         </form>
     </section>
     
@@ -43,5 +43,8 @@
         
     </form>
     </section>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script src="app.js"></script>
+    <script src="registro.js"></script>
 </body>
 </html>

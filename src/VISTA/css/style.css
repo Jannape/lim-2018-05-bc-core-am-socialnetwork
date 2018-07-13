@@ -9,9 +9,10 @@ body {
 }
 
 header{
-    background: #333;
+    background: #052F5F;
     width: 100%;
     position:fixed; 
+    overflow: auto;
 }
 .wrapperMenu{
     width:inherit;
@@ -26,13 +27,14 @@ header{
     width:90%;
     margin: auto;
 }
+
 .top {
     padding-top: 80px;
 }
 .imgUser {
-    height: 50px;
     float: right;
     cursor: pointer;
+    height: 100%;
 }
 
 header div { 
@@ -65,7 +67,7 @@ font-size: 15px;
 }
 
 .heigth {
-     height: 250px;
+    height: 270px;
 }
 textarea {
     border: none;
@@ -84,10 +86,12 @@ textarea {
     border-radius: 7px;
     float: right;
     outline: none;
+    color: white;
+    background: #f1a203;
 }
 
 .comentary select  {
-    border: 2px solid darkslategray;
+    border: 2px solid #F1A203;
     padding: 10px;
     float: left;
     outline: none;
@@ -100,7 +104,7 @@ textarea {
     border-radius: 5px;
     border: 1px solid ;
     float: right;
-    margin: 20px 10px;
+    margin: 20px 15px;
     
 }
 @media screen and (min-width:800px) {
@@ -109,3 +113,4 @@ textarea {
     }
     
 }
+
