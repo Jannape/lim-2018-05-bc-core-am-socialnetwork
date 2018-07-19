@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Rock+Salt|Yanone+Kaffeesatz');
+
+body {
+font-family: segoe UI;
+/*background:  #2a3440;*/
+height: auto;
+margin: 0;
+
+}
+h1 {
+  display: none;
+}
+
+a {
+color: #333;
+display:inline-block;
+text-decoration: none;
+}
+
+h2 {
+cursor: pointer;
+text-align: center;
+font-size: 17px;
+font-weight: 600;
+text-transform: uppercase;
+display:inline-block;
+margin: 40px 8px 10px 8px; 
+color: #cccccc;
+}
+h2.active {
+   color: #052F5F;
+   border-bottom: 2px solid #72BFE9;
+}
+h2.inactive {
+  color: #F1A203;
+  font-family: 'Segoe UI';
+}
+
+label {
+  float: left;
+  padding: 10px 40px;
+  font-size: 18px;
+}
+
+[type=button]{
+  width: 60%;
+  margin: 5% auto;
+  border: none;
+  color: white;
+  padding: 4%;
+  display: block;
+  font-size: 16px;
+  font-family: segoe UI;
+  cursor: pointer;
+  border-radius: 3px;
+  background: #052F5F;
+}
+
+#google {
+  background: #d62d20;
+}
+
+[type=button]:hover {
+  transition: 0.7s;
+  background:#72BFE9;
+}
+
+#form-registro, 
+#form-sesion {
+    margin: 0 5%;
+}
+
+#form-registro {
+    display: none;
+}
+
+#formContent {
+width: 90%;
+border-radius: 10px 10px 10px 10px;
+background: #fff;
+text-align: center;
+margin:-5% auto;
+box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+-webkit-border-radius: 10px 10px 10px 10px;
+-webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
+
+#formFooter {
+background-color: #f6f6f6;
+border-top: 1px solid #dce8f1;
+padding: 25px;
+text-align: center;
+-webkit-border-radius: 0 0 10px 10px;
+border-radius: 0 0 10px 10px;
+}
+
+input[type=text], 
+input[type=password]{
+background-color: #f6f6f6;
+border: none;
+padding: 15px 32px;
+font-family: segoe UI;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin-bottom:4%;
+width: 65%;
+outline: none;
+border: 2px solid #f6f6f6;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+-webkit-border-radius: 5px 5px 5px 5px;
+border-radius: 5px 5px 5px 5px;
+}
+input[type=text]:focus,
+input[type=password]:focus{
+background-color: #fff;
+border-bottom: 3px solid #72BFE9;
+}
+
+.message {
+    padding: 3%;
+    margin: 0% 15%;
+    display: none;
+}
+
+.underlineHover:hover {
+color: #052F5F;
+transition: 0.5s;
+}
+
+.icon {
+  background: aliceblue;
+  border: 1px solid #72BFE9;
+  border-radius:10%;
+  width:20%;
+  margin:auto 35%;
+  padding: 5%;
+}
+
+#bienvenida{
+  display: none;
+  top: 50%;
+  left:25%;
+  width: 30%;
+  position: absolute;
+  margin: auto;
+  text-align: center;
+  padding: 10%;
+  background: #F1A203;
+  color: white;
+  font-size: 30px;
+  font-family: Segoe UI;
+}
+
+@media screen  and (min-width:600px) {
+    #header-login{
+  width: 100%; 
+  background:#72BFE9;
+  overflow: auto;
+  text-align: center;
+}
+
+h1 {
+    display: block;
+  font-family: Pacifico;
+  font-size: 40px;
+  color: white;
+}
+    .container-login {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  #formContent {
+      margin-top: 6%;
+       width: 60%;
+      float: right;
+  }
+  .icon{  
+      padding: 7%;
+      width: 20%;
+      float: left;
+      margin: 40% auto;
+  }
+}
+
+@media screen  and (min-width:800px) {
+   
+  #formContent {
+      margin-top: 1%;
+      width: 50%;
+  }
+
+  .icon{  
+      margin: 18% 10% auto;
+      padding: 5%;
+      width: 15%;
+  }
+    
+  [type=button]{
+   padding: 2%;
+  }
+}

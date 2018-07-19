@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="font/fontello.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Social Network</title>
+</head>
+
+<body>
+    <header class="wrapperMenu">
+        <div id="menu" class="icon-menu">
+            <ul id="contenido">
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+                <li>
+                    <a href="#">Lorem</a>
+                </li>
+                <li>
+                    <a href="#">Lorem</a>
+                </li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <img class="imgUser" src="img/user.PNG" />
+            <div class="dropdown-content">
+                <a href="#">Mi Perfil</a>
+                <a href="#">Cerrar Sesion</a>
+            </div>
+        </div>
+    </header>
+    <!-- <header>
+        <div class="menuContent" style="width: 50%;">
+        <input type="text" placeholder="Buscar Aqui" />
+        <div style="float :right;" class="icon-search"></div>
+        </div>
+    </header>-->
+    <section class="wrapper">
+        <form class="comentary">
+            <textarea name="textarea" rows="4" cols="50" placeholder="Ingresa tu opinion" id="mensajePost"></textarea>
+            <select>
+                <option value="">PUBLICO 🌎 </option>
+                <option value="">PRIVADO 🔒</option>
+            </select>
+            <button type="button" id="post" onclick="guardar()">PUBLICAR</button>
+        </form>
+    </section>
+
+
+    <section class="wrapper">
+        <form class="comentary">
+            <!--<button type="button" id="seleccion" class="icon-ellipsis-vert"></button>-->
+            <textarea name="textarea" rows="4" cols="50"></textarea>
+            <input type="number" id="textValuefixed" readonly/>
+            <button type="button" class="icon-ok"></button>
+            <div class="section-seleccion">
+                <button type="button">Editar</button>
+                <button type="button" id="cerrar-sesion">Eliminar</button>
+            </div>
+
+        </form>
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="app.js"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
+
