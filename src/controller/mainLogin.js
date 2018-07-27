@@ -19,8 +19,10 @@ const formSesion = document.getElementById('form-sesion');
 
 
 
-window.onload = ()=>{
-    getDataUserSessionActive();
+window.onload = () => {
+    getDataUserSessionActiveLogin();
+    let modal = document.getElementById('miModal');
+    modal.classList.remove('modalView');
 };
 buttonRegister.addEventListener('click', (e) => {
     e.preventDefault();
@@ -55,19 +57,34 @@ sesion.addEventListener('click', () => {
 const recoverPass = () => {
     const auth = firebase.auth();
     const emailAddress = document.getElementById('correo-sesion').value;
-
+    let modal = document.getElementById('miModal');
+    let elmet = '';
+    modal.classList.add('modalView');
     auth.sendPasswordResetEmail(emailAddress)
         .then((result) => {
-            alert('SE HA ENVIADO UN CORREO A SU CUENTA. SIGA LOS PASOS');
+            elmet = modalView('Recuperar Contraseña', 'SE HA ENVIADO UN CORREO A SU CUENTA. SIGA LOS PASOS', 'Aceptar','Cerrar');
+            modal.innerHTML = elmet;
+            console.log(modal);
+            let accept = document.getElementById('accept');
+            accept.addEventListener('click', () => {
+                window.location.href ="https://outlook.live.com/owa/#";
+            })
+
         }).catch(function (error) {
-            console.log(error);
+            //elmet = modalView('Recuperar Contraseña', 'No se encuentra en nuestros registros', 'Registrarse','Cerrar');
+            //modal.innerHTML = elmet;
+            let register = document.getElementById('accept');
+           /* register.addEventListener('click', () => {
+                window.onload();
+            })*/
+            alert('No se encuentra registrado');
         })
 };
 
 buttonSesion.addEventListener('click', () => {
     const emailLogin = document.getElementById('correo-sesion');
-const passwordLogin = document.getElementById('password-sesion');
-    initSessionFirebase(emailLogin,passwordLogin);
+    const passwordLogin = document.getElementById('password-sesion');
+    initSessionFirebase(emailLogin, passwordLogin);
 });
 
 document.getElementById('forgot-passw').addEventListener('click', () => {

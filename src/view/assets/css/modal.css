@@ -1,0 +1,75 @@
+body {
+    font: 600 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+
+  .modal-contentView{
+      background-color:aliceblue;
+      padding: 10px 20px;
+      margin: 20% auto;
+      position: relative;
+    }
+  
+    .modalView{
+      background-color: rgba(0, 0, 0, 0.5);
+      position:fixed;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+      opacity:0;
+      pointer-events:none;
+    }
+  #message{
+      text-decoration: none;
+      font-family: segoe UI;
+      font-size: 20px;
+      padding: 1% 3%;
+      background: black;
+      color: aliceblue;
+      border-radius: 40%;
+      float: right;
+  }
+  #message:hover{
+      background: aliceblue;
+      color: black;
+  }
+    #miModal:target{
+      opacity:1;
+      pointer-events:auto;
+    }
+  .modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+  }
+  .btnmodal{
+      cursor: pointer;
+      margin: 10px;
+      padding: 20px;
+      border: none;
+      border-radius: 7px;
+      outline: none;
+      color: white;
+      background: #f1a203;
+       display:inline-flex;
+  }
+ .btnAncla {
+  background-color: #f1a203;
+  border-radius: 3px;
+  text-decoration: none;
+ }
+  .modal-close:hover {
+    color:black;
+  }
+  @media screen and (min-width:400px) {
+     .modal-contentView{
+      width:60%;
+    }
+      
+  }

@@ -5,13 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="../src/view/assets/font/fontello.css" />
-    <link rel="stylesheet" href="../src/view/assets/css/style.css" />
-=======
     <link rel="stylesheet" href="assets/font/fontello.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
->>>>>>> develop
+    <link rel="stylesheet" href="assets/css/style.modal.css" />
+    <link rel="stylesheet" href="assets/css/modal.css" />
     <title>Social Network</title>
 </head>
 
@@ -30,37 +27,38 @@
                 </li>
             </ul>
         </div>
+        <h1 id="name-user">Hola</h1>
         <div class="dropdown">
             <img class="imgUser" src="assets/img/user.PNG" />
             <div class="dropdown-content">
                 <a href="#">Mi Perfil</a>
-                <a href="#">Cerrar Sesion</a>
+                <a href="#miModal" id="log-out">Cerrar Sesion</a>
             </div>
         </div>
     </header>
+    <div id="container-modal"></div>
     <!-- <header>
         <div class="menuContent" style="width: 50%;">
         <input type="text" placeholder="Buscar Aqui" />
         <div style="float :right;" class="icon-search"></div>
         </div>
     </header>-->
-    <section class="wrapper">
+    
+    <section class="wrapper top" >
         <form class="comentary" id="form-content">
             <textarea name="textarea" rows="4" cols="50" placeholder="Ingresa tu opinión" id="txt-description-post"></textarea>
-            <select>
-                <option value="">PUBLICO 🌎 </option>
-                <option value="">PRIVADO 🔒</option>
+            <select id="post-privacity-selector">
+                <option value="PUBLICO">PUBLICO 🌎 </option>
+                <option value="PRIVADO">PRIVADO 🔒</option>
             </select>
             <!--<label>Likes</label>
             <input type="text" id="input-likes-count" />-->
-            <button type="button" id="btn-public-post">PUBLICAR</button>
+            <button type="button" id="btn-public-post" class="publish">PUBLICAR</button>
         </form>
     </section>
 
-
-    <section id="posts" class="wrapper">
-    
-    </section>
+    <div id="miModal" class="modalView"></div>
+    <section id="posts" class="wrapper"></section>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script src="../model/bd.js"></script>
     <script src="../model/dataLogin.js"></script>
