@@ -53,8 +53,7 @@ window.registerUserFirebase = (email, password, name, errorName, errorEmail, err
 /* ***********************************************************Envia correo de confirmación****************************************************************************/
 window.sendEmailVerification = () => {
   var actionCodeSettings = {
-    url: 'https://jannape.github.io/lim-2018-05-bc-core-am-socialnetwork/src/view/wall.html',
- 
+    url: 'https://jossielinn.github.io/lim-2018-05-bc-core-am-socialnetwork/src/view/wall.html',
     handleCodeInApp: false
   };
   const user = firebase.auth().currentUser;
