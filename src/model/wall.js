@@ -359,6 +359,7 @@ window.getDataUserSessionActive = () => {
     if (user) {
       window.renderModal(containerModalWelcome);
       const nameUser = document.getElementById('nameUser');
+      nameUser.innerHTML = '';
       nameCurrentUser(nameUser, user);
     }
   });

@@ -5,10 +5,8 @@
 window.getDataUserSessionActiveLogin = () => { // observer()
   firebase.auth().onAuthStateChanged((user) => {
   if (user) {  
-    console.log(user);
      (firebase.database().ref('users/' + user.uid).once('value', (snapshot) =>  {
       const isNewUser =   snapshot.val().isNewUser;
-      console.log(isNewUser);
       if(!isNewUser) {
         window.directionalUrl('../src/view/wall.html');
       } 
@@ -53,7 +51,7 @@ window.registerUserFirebase = (email, password, name, errorName, errorEmail, err
 /* ***********************************************************Envia correo de confirmación****************************************************************************/
 window.sendEmailVerification = () => {
   var actionCodeSettings = {
-    url: 'https://jossielinn.github.io/lim-2018-05-bc-core-am-socialnetwork/src/view/wall.html',
+    url: 'https://jannape.github.io/lim-2018-05-bc-core-am-socialnetwork/src/view/wall.html',
     handleCodeInApp: false
   };
   const user = firebase.auth().currentUser;
@@ -113,7 +111,6 @@ const createUserInBd = (objectUser, name) => {
     }).then(()=>{
       (firebase.database().ref('/users/' + objectUser.user.uid).once('value', (snapshot) => {
         const displayName = snapshot.val().userName;
-        console.log(displayName);
         if(displayName) {
           window.directionalUrl('../src/view/wall.html');
         }
@@ -142,7 +139,6 @@ window.registerUserFacebook = () => {
 window.registerUserGmail = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithPopup(provider).then((result) => {
-    console.log(result);
     if (result.additionalUserInfo.isNewUser) {
       createUserInBd(result, name);
     } else {

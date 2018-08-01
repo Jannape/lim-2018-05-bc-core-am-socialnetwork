@@ -10,14 +10,12 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/style.modal.css" />
     <link rel="stylesheet" href="assets/css/modal.css" />
-    <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
-
     <title>Edu Tic</title>
 </head>
 
 <body>
     <header class="wrapperMenu">
-        <img src="../view/assets/img/icono.png" id="icono" />
+        <img src="../view/assets/img/icono.png" id="icono" alt="Edu-Tic" />
         <img src="../view/assets/img/nombre%20tic.png" alt="logoTech" id="logoTech" />
         <div id="menu" class="icon-cog-outline">
             <ul id="contenido">
@@ -26,51 +24,28 @@
                 </li>
             </ul>
         </div>
-        <h3 id="nameUser"></h3>
+        <h3 id="nameUser">Hola</h3>
     </header>
     <div id="container-modal"></div>
     <section class="wrapper top">
         <form class="comentary" id="form-content">
             <textarea name="textarea" rows="4" cols="50" placeholder="Ingresa tu opinión" id="txt-description-post"></textarea>
-
-            <!-- <img id="img" src="" alt=""> -->
-
             <p id="txterror"></p>
             <select id="post-privacity-selector">
                 <option value="PUBLICO">PUBLICO 🌎 </option>
                 <option value="PRIVADO">PRIVADO 🔒</option>
             </select>
             <button type="button" id="btn-public-post" class="publish">PUBLICAR</button>
-
         </form>
-    </section>   
-      <section class="wrapper"></section>
-
-            <!-- <section class="wrapper top"> -->
-                <!-- <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                    </div>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="upload-file-selector" accept="image/x-png,image/gif,image/jpg" aria-describedby="inputGroupFileAddon01">
-                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                    </div>
-                </div> -->
-
-        </form>
-        </section>
-
-
-
-        <div id="mi-modal" class="modalView"></div>
-        <section id="posts" class="wrapper"></section>
-        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-        <script src="../model/firebase-config.js"></script>
-        <script src="../model/functions-validation.js"></script>
-        <script src="../model/wall.js"></script>
-        <script src="../controller/dom-wall.js"></script>
-   
-
+    </section>
+    <section class="wrapper"></section>
+    <div id="mi-modal" class="modalView"></div>
+    <section id="posts" class="wrapper"></section>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="../model/firebase-config.js"></script>
+    <script src="../model/functions-validation.js"></script>
+    <script src="../model/wall.js"></script>
+    <script src="../controller/dom-wall.js"></script>
 </body>
 
 </html>
